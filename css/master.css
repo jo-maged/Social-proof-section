@@ -16,6 +16,8 @@ body{
     transform: translate(-50% , -50%);
     background-color: white;
     padding: 80px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .parent > div:nth-of-type(1){
     width: 584px;
@@ -31,21 +33,25 @@ body{
     background-image: url(../images/bg-pattern-bottom-desktop.svg);
     position: absolute;
 }
-.parent h1{
+.parent-head{
+    width: 380px;
+    height: 230px;
+}
+h1{
     font-weight: 700;
     font-size: 40px;
     color: hsl(300, 43%, 22%);
     width: 330px;
 }
-.parent > p:nth-of-type(1){
+.parent-head > p:nth-of-type(1){
     width: 300px;
     line-height: 1.2;
     font-weight: 500;
     color: hsl(303, 10%, 53%);
+    margin-top: 20px;
 }
-.top-left-box{
-    width: 350px;
-    position: absolute;
+.parent-box{
+    width: 500px;
     top: 66px;
     right: 242px;
 }
@@ -53,11 +59,20 @@ body{
     width: 450px;
     height: 50px;
     background-color: #f7f2f8;
-    margin: 15px auto;
     border-radius: 10px;
     display: flex;
     align-items: center;
     padding: 0px 45px;
+}
+.parent-box > .box:nth-of-type(1){
+    margin: 15px 0px;
+}
+.parent-box > .box:nth-of-type(2){
+    margin: 15px auto;
+}
+.parent-box > .box:nth-of-type(3){
+    margin-top: 15px;
+    margin-left: 60px;
 }
 .star{
     margin-right: 45px;
@@ -66,12 +81,18 @@ body{
     font-weight: 700;
     color: hsl(300, 43%, 22%);
 }
-.bottom-center-box-user{
+.parent-box-user{
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
     height: 300px;
     width: 925px;
+}
+.parent-box-user > .box-user:nth-of-type(2){
+    margin-top: 15px;
+}
+.parent-box-user > .box-user:nth-of-type(3){
+    margin-top: 30px;
 }
 .box-user{
     width: 290px;
@@ -118,6 +139,10 @@ body{
         background-color: white;
         height: 1350px;
         margin: 20px auto;
+        padding: 20px 0px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
     }
     .parent > div:nth-of-type(1){
         height: 232px;
@@ -134,14 +159,18 @@ body{
         top: 32px;
         opacity: 0;
     }
-    .parent h1{
+    .parent-head{
+        width: 350px;
+        height: fit-content;
+    }
+    .parent-head h1{
         font-weight: 700;
         font-size: 40px;
         text-align: center;
         margin: 80px 0px 30px;
         color: hsl(300, 43%, 22%);
     }
-    .parent > p:nth-of-type(1){
+    .parent-head > p:nth-of-type(1){
         text-align: center;
         width: 300px;
         line-height: 1.2;
@@ -149,22 +178,52 @@ body{
         font-weight: 500;
         color: hsl(303, 10%, 53%);
     }
+    .parent-box{
+        width: 350px;
+        height: 250px;
+        margin-top: -50px;
+    }
     .box{
         width: 320px;
         height: 70px;
         text-align: center;
         padding: 15px;
         background-color: #f7f2f8;
-        margin: 15px auto;
         border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    .parent-box > .box:nth-of-type(1){
+        margin: 15px auto;
+    }
+    .parent-box > .box:nth-of-type(2){
+        margin: 15px auto;
+    }
+    .parent-box > .box:nth-of-type(3){
+        margin: 15px auto;
     }
     .star{
         font-size: 25px;
         margin-bottom: 5px;
+        margin-right: 0px;
     }
     .box p{
         font-weight: 700;
         color: hsl(300, 43%, 22%);
+    }
+    .parent-box-user{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 300px;
+        width: 320px;
+        margin: 20px auto;
+    }
+    .parent-box-user > .box-user:nth-of-type(2){
+        margin-top: 0px;
+    }
+    .parent-box-user > .box-user:nth-of-type(3){
+        margin-top: 0px;
     }
     .box-user{
         width: 320px;
